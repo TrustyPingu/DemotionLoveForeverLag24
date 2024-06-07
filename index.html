@@ -1,0 +1,164 @@
+<!-- Select Any FOUR Features
+✨HTML
+[ yup ] Include at least three Images UPLOADED to the Replit 
+[ ? ] Include at least two HTML pages 
+
+✨CSS
+[  ] Include at a separately linked CSS file 
+[  ] Upload a Font to Your Replit 
+
+✨JavaScript
+[  ] Include at a separately linked JS file 
+[ yes ] Include .on(“click”) feature 
+[  ] Include .on(“submit”) feature 
+[ yup ] Include animation 
+[ ] Include a PDE files with JavaScript
+
+✨Extras
+[  ] Include Flexbox to assist with layout 
+[  ] Upload Website to GitHub
+[  ] Use a Bootstrap CSS Framework
+[  ] Use a w3Schools template 
+[  ] Change the Cursor 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Interactive Slideshow</title>
+        <style>
+            body{
+                background-color: aliceblue;
+            }
+            .slide{
+                border: 12px solid black;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 800px;
+                background-color: white;
+            }
+
+            .slide-text{
+                background-color: rgba(240,248,255,0.8);
+                width: 80%;
+                text-align: center;
+                border-radius: 20px;
+                font-family: "Poetsen One", sans-serif;
+            }
+
+            h1{
+                text-align: center;
+                width: 100%;
+            }
+
+            button:hover{
+                   background: linear-gradient(#408c99, #599bb3);
+            }
+
+            button{
+              width:140px;
+              height:50px;
+              border-width:1px;
+              color:#fff;
+              border-color:#599bb3;
+              font-weight:bold;
+              border-radius: 8px;
+              box-shadow: 0px 10px 14px -7px #276873;
+              text-shadow: 0px 1px 0px #3d768a;
+              background:linear-gradient(#599bb3, #408c99);
+            }
+
+            .buttons{
+                display:flex;
+                justify-content: center;
+                margin-top: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+    <h1>What once was</h1>
+    <br>
+        <div class="slide">
+            <img src="images/Confused.jpg" width="400" alt="Mushrooms">
+            <div class="slide-text"><h3>We met on the first day of our web dev class</h3></div>
+        </div>
+
+        <div class="buttons">
+            <button type="button"> ↝ Next ↝ </button>
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    var numClick = 0;
+    $("button").on("click",function(){
+        numClick++;
+        if(numClick == 1){
+            $("img").attr("src","images/Carry.jpg");
+            $("h3").text("we fell for eachother that first day");
+
+        }
+        else if(numClick == 2){
+            $("img").attr("src","images/Cold.jpg");
+            $("h3").text("We went on many dates");
+        }
+        else if(numClick == 3){
+            $("img").attr("src","images/Mcdonalds.jpg");
+            $("h3").text("We got food together");
+            // $("img").hide();
+            // $("img").slideDown(900);
+           // $("img").animate({width: "600px", height: "400px"})
+
+          }
+          else if(numClick == 4){
+              $("img").attr("src","images/Library.jpg");
+              $("h3").text("We studied together");
+
+
+              }
+              else if(numClick == 5){
+                  $("img").attr("src","images/Lunch.jpg");
+                  $("h3").text("We loved eachother");
+
+
+
+
+
+                     }
+                          else if(numClick == 6){
+                              
+                          $("img").hide();
+                              $("h3").text("I leave him with this poem");
+
+                                }
+                                else if(numClick == 7){
+                                    $("img").fadeIn();
+                                    $("img").animate({width: "200px", height: "400px"})
+                                    $("img").attr("src","images/Poem.jpg");
+
+
+
+
+                              
+        }
+
+    })
+
+        $("img").animate({width: "410px"},1000);
+$()
+
+
+        $("h1").hover(function() {
+            $(this).animate({ fontSize: '3em' }, 'slow');
+        }, function() {
+            $(this).animate({ fontSize: '2em' }, 'slow');
+        });
+
+    </script> 
+
+    </body>
+</html>
